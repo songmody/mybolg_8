@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-import blogapp.views #blogapp에서 값을 view에서 받고 주소만들기
+import herokuapp.views #blogapp에서 값을 view에서 받고 주소만들기
 from django.conf import settings
 from django.conf.urls.static import static
 
