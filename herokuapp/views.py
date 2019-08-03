@@ -3,8 +3,8 @@ from django.utils import timezone
 from .models import Heroku #admin상의 블로그프젝을 홈에 띄우기위함
 
 def home(request):
-    heroku = Heroku.objects #쿼리셋
-    return render(request,'home.html',{'heroku':heroku}) #home.html에서 값을 내보내는 함수
+    herokus = Heroku.objects #쿼리셋
+    return render(request,'home.html',{'herokus':herokus}) #home.html에서 값을 내보내는 함수
 
 def finish(request,heroku):
     finishs=get_object_or_404(heroku, pk=heroku)
