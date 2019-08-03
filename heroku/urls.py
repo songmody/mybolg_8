@@ -6,7 +6,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('heroku/<int:blog_id>',herokuapp.views.finish,name="finish"),
+    path('heroku/<int:heroku_id>',herokuapp.views.finish,name="finish"),
     path('',heroku.views.home,name="home"),#home이라는주소생성
     path('heroku/drink/',herokuapp.views.drink, name="drink"),
     path('heroku/food/',herokuapp.views.food, name="food"),
