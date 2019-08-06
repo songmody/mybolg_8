@@ -6,8 +6,8 @@ def home(request):
     herokus = Heroku.objects #쿼리셋
     return render(request,'home.html',{'herokus':herokus}) #home.html에서 값을 내보내는 함수
 
-def finish(request,heroku):
-    finishs=get_object_or_404(heroku, pk=heroku)
+def finish(request,Heroku_id):
+    finishs=get_object_or_404(Heroku, pk=Heroku_id)
     return render(request,'finish.html',{'finishs':finishs})
     
 def drink(request):
