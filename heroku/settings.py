@@ -56,7 +56,7 @@ ROOT_URLCONF = 'heroku.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['herokuapp/templates/base.html'],
+        'DIRS': ['heroku/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,7 +122,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'herokuapp') 
+    os.path.join(BASE_DIR, 'herokuapp','static') 
 ]
 #static파일들이 현재 어디에 있는지를 나타내는 코드 블로그앱->스태틱폴더에 존재
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')

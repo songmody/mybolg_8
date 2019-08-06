@@ -3,11 +3,10 @@ from django.utils import timezone
 from .models import Heroku #admin상의 블로그프젝을 홈에 띄우기위함
 
 def home(request):
-    herokus = Heroku.objects #쿼리셋
-    return render(request,'home.html',{'herokus':herokus}) #home.html에서 값을 내보내는 함수
+    return render(request,'home.html') #home.html에서 값을 내보내는 함수
 
-def finish(request,Heroku_id):
-    finishs=get_object_or_404(Heroku, pk=Heroku_id)
+def finish(request,heroku_id):
+    finishs=get_object_or_404(Heroku, pk=heroku_id)
     return render(request,'finish.html',{'finishs':finishs})
     
 def drink(request):
