@@ -1,73 +1,79 @@
 <!DOCTYPE html>
-
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <!--link=북스트랩에서 css only부분, script= js,popper.js,,,부분 복붙-->
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <!--navbar색깔바꾸기-->
-        <a class="navbar-brand" href="#"><b>Gifticon Shop </b></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{%url 'home'%">홈<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'drink' %}">음료</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'food' %}">식품</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'fashion' %}">패션잡화</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'specialprice' %}">특가상품</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <br>
-    <h3><b>* 구매할 종류, 구매하는 분의 성함 등을 적어주세요 *</b></h3>
-    <div id="new">
-        <form action="{% url 'create' %}">
-
-            <h4>제목 : </h4>
-            <input type="text" name="title">
-            <br>
-            <br>
-            <h4>본문 : </h4>
-            <textarea cols=40 rows=10 name="body"></textarea>
-            <br>
-            <br>
-            <input class="btn btn-dark" type="submit" value="메시지보내기">
-        </form>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!--navbar색깔바꾸기-->
+    <a class="navbar-brand" href="#"><b>Gifticon Shop </b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">홈<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'drink' %}">음료</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'food' %}">식품</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'fashion' %}">패션잡화</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'specialprice' %}">특가상품</a>
+        </li>
+      </ul>
     </div>
+  </nav>
+  <div id="descript">
+    <br></br>
+    <br></br>
+    <br></br>
+    <h2>안쓰는 기프트콘은 <br>
+      <h1>Cash!</h1>
+      <h2> <br>
+        <h2>돈이 부족할땐? <h1>Gifticon Shop!</h1>
+        </h2>
+  </div>
+
 </body>
 
 <style>
-    #new {
-        margin-top:20px;
-        margin-left: 50px;
-    }
-    h3{
-        font-style:inherit;
-        margin-left:35px;
-        color:tomato;
-    }
+  #descript {
+    margin-left: 30px;
+    font-style: italic;
+    color: aliceblue
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  body {
+    background-image: url("/static/back.jpg");
+    background-color: rgb(36, 36, 36);
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 55%;
+  }
 </style>
+
+<!--Quickly sell non-useable beverage gifticon and purchase the required gifticon cheaply-->
